@@ -1,0 +1,35 @@
+<div class="theme-container m-bottom-50">
+
+    <h1 class="head-1 m-bottom-25">
+        <%= playlist[0].name %>
+    </h1>
+
+    <div style="display: flex; justify-content: space-between;" class="m-bottom-50">
+        <span class="head-3">
+            Genre: <%= playlist[0].genre %>
+        </span>
+        <span class="head-3">
+            Date Created: 
+                <%= playlist[0].created.getFullYear() %>-
+                <%= playlist[0].created.getMonth()+1 %>-
+                <%= playlist[0].created.getDate() %>
+        </span>
+    </div>
+
+    <% songs.forEach(item => { %>
+
+        <div class="song m-bottom-25">
+            <div>
+                <h4> <%= item.name %> </h4>
+                <h4> <%= item.artist %> </h4>
+            </div>
+            <div>
+                <span>Genre:  <%= item.genre %> </span>
+                <span>Album:  <%= item.album %> </span>
+                <span>Year:  <%= item.year %> </span>
+            </div>
+            <a href="/playlist/deletefromplaylist/<%= playlist[0].playlist_id %>/<%= item.song_id %>">Remove &nbsp; Song</a>
+        </div>
+
+    <% }) %>
+</div>

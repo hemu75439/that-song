@@ -1,0 +1,45 @@
+<div class="theme-container m-bottom-50">
+    <h1 class="head-1 m-bottom-25">RECOMMENDED</h1>
+
+    <div>
+        <h4 class="head-3 m-bottom-25">PLAYLIST</h3>
+
+        <% playlist.forEach(item => { %>
+            
+            <a href="/playlist/<%= item.playlist_id %>" class="playlist">
+                <h4> <%= item.name %> </h4>
+                <div>
+                    <span>Genre: <%= item.genre %> </span>
+                    <span>
+                        Date Created: 
+                            <%= item.created.getFullYear() %>-
+                            <%= item.created.getMonth()+1 %>-
+                            <%= item.created.getDate() %>
+                    </span>
+                </div>
+            </a>
+            
+        <% }) %>
+    </div>
+
+    <div class="m-top-50">
+        <h4 class="head-3 m-bottom-25">SONGS</h3>
+
+            <% songs.forEach(item => { %>
+
+                <div class="song m-bottom-25">
+                    <div>
+                        <h4> <%= item.name %> </h4>
+                        <h4> <%= item.artist %> </h4>
+                    </div>
+                    <div>
+                        <span>Genre:  <%= item.genre %> </span>
+                        <span>Album:  <%= item.album %> </span>
+                        <span>Year:  <%= item.year %> </span>
+                    </div>
+                    <a href="/song/addtoplaylist/<%= item.song_id %>">+ Add to Playlist</a>
+                </div>
+
+            <% }) %>
+    </div>
+</div>

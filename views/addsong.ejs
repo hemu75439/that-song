@@ -1,0 +1,18 @@
+<div class="theme-container m-bottom-50">
+    <div>
+        <span class="head-2">ADD</span>
+        <span class="head-1">SONG</span>
+    </div>
+
+    <form class="theme-form" action="/song/add" method="POST">
+        <input type="text" name="name" id="name" placeholder="NAME" required>
+        <input type="text" name="artist" id="artist" placeholder="ARTIST" required>
+        <input type="text" name="genre" id="genre"  placeholder="GENRE" required>
+        <input type="text" name="album" id="album" placeholder="ALBUM / MOVIE" required>
+        <input type="number" min="1900" max="3000" name="year" id="year" placeholder="YEAR" required>
+
+        <button class="m-top-50" type="submit">
+            <img src="/icons/plus icon.svg"> ADD
+        </button>
+    </form>
+</div>

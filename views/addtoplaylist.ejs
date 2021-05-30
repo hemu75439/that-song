@@ -1,0 +1,45 @@
+<div class="theme-container">
+
+    <div class="song-title m-bottom-25">
+        <div>
+            <h4>
+                <%= song[0].name %>
+            </h4>
+            <h4>
+                <%= song[0].artist %>
+            </h4>
+        </div>
+        <div>
+            <span>
+                Genre: <%= song[0].genre %> 
+            </span>
+            <span>
+                Album: <%= song[0].album %>
+            </span>
+            <span>
+                Year: <%= song[0].year %>
+            </span>
+        </div>
+    </div>
+
+
+    <form class="theme-form" action="/song/addtoplaylist/<%= song[0].song_id %>" method="POST">
+
+        <select name="playlist_id">
+
+            <% playlists.forEach(item => { %> 
+
+                <option value="<%= item.playlist_id %>">
+                    <%= item.name %>
+                </option>
+
+            <% }) %>
+
+        </select>
+
+        <button class="m-top-50" type="submit">
+            <img src="/icons/plus icon.svg"> ADD
+        </button>
+    </form>
+
+</div>

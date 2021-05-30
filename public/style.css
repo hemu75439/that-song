@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Odibee Sans', cursive;
+}
+
+body {
+    background-color: #FFFFFE;
+}
+
+@media  screen and (min-width: 640px) {
+    
+
+    header {
+        height: 4.5em;
+        background-color: #0D0D0D;
+        color: #FFFFFE;
+        box-shadow: 0px 2px 2px 2px #999999;
+        position: sticky;
+        top: 0;
+    }
+
+    .header-container {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 740px;
+        padding: 0 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: #FFFFFE;
+    }
+
+    .logo span {
+        font-size: 2.2rem;
+        font-weight: lighter;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 30px;
+    }
+
+    nav a {
+        font-size: 1.15rem;
+        font-weight: lighter;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #FFFFFE;
+        transition: all 300ms ease-in-out;
+    }
+    nav a:hover, nav a:focus {
+        transform: scale(1.2);
+    }
+
+    nav img {
+        height: 1.15rem;
+        margin-right: 5px;
+    }
+
+
+
+
+
+
+
+    /* To make a container div beautiful just add "theme-container" class */
+    .theme-container {
+        margin: 0 auto;
+        max-width: 690px;
+        width: calc(100% - 50px);
+        background-color: #EFF0F3;
+        box-shadow: 2px 2px 3px 3px #999999;
+        padding: 40px 80px;
+        border-left: 5px solid #D9376E;
+    }
+
+
+
+
+    /* Titles of 3 sizes to be used accordingly */
+    .head-1 {
+        font-size: 3rem;
+        font-weight: lighter;
+    }
+    .head-2 {
+        font-size: 2.3rem;
+        margin-right: 10px;
+        font-weight: lighter;
+    }
+    .head-3 {
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+
+    /* Anchor tag as head-3 */
+    .head-a {
+        text-decoration: none;
+        color: #0D0D0D;
+        display: block;
+        font-size: 2rem;
+        font-weight: lighter;
+        transition: all 300ms ease-in-out;
+    }
+    .head-a:hover, .head-a:focus {
+        color: #D9376E;
+    }
+
+
+    /* Just add class "theme-form" to a form tag to make a beautiful form */
+    .theme-form {
+        margin: 40px 0 20px 0;
+    }
+
+    .theme-form input {
+        display: block;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        background-color: transparent;
+        font-size: 1.15rem;
+        padding: 8px 3px;
+        border-bottom: 1px solid #0D0D0D;
+        margin-bottom: 17px;
+    }
+    .theme-form input:focus {
+        border-bottom: 3px solid #D9376E;
+    }
+
+    .theme-form select {
+        display: block;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        background-color: transparent;
+        font-size: 1.15rem;
+        padding: 8px 3px;
+        border-bottom: 1px solid #0D0D0D;
+        margin-bottom: 17px;
+    }
+    .theme-form select:focus {
+        border-bottom: 3px solid #D9376E;
+    }
+
+    .theme-form button {
+        padding: 10px 25px;
+        font-size: 1.15rem;
+        background-color: #D9376E;
+        color: #FFFFFE;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+    .theme-form>button img {
+        height: 1.15rem;
+        margin-right: 8px;
+    }
+    .theme-form button:focus, .theme-form button:hover {
+        animation: vibe 200ms ease-in infinite alternate;
+    }
+
+    @keyframes vibe {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-2deg);
+        }
+        100% {
+            transform: rotate(4deg);
+        }
+    }
+
+
+
+    /* For adding margins to elements */
+    .m-bottom-50 {
+        margin-bottom: 50px;
+    }
+    .m-top-50 {
+        margin-top: 50px;
+    }
+    .m-bottom-25 {
+        margin-bottom: 25px;
+    }
+    .m-top-25 {
+        margin-top: 25px;
+    }
+
+
+
+
+    /* For a song add class "song" */
+    .song {
+        background-color: #FFFFFE;
+        padding: 15px 40px;
+        box-shadow: inset 0px 0px 10px 2px #999999;
+        position: relative;
+    }
+    .song::after {
+        content: "+ Add to Playlist";
+        position: absolute;
+        bottom: -12px;
+        padding: 0 5px;
+        background-color: #EFF0F3;
+        color: #EFF0F3;
+    }
+    .song div {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .song h4 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+    .song a {
+        position: absolute;
+        bottom: -12px;
+        z-index: 1;
+        text-decoration: none;
+        color: #D9376E;
+        font-size: .8rem;
+        transform: translate(11px, 0) scale(1);
+        transition: all 300ms ease-in-out;
+    }
+    .song a:hover, .song a:focus {
+        transform: translate(11px, 0) scaleX(1.2);
+    }
+
+
+
+
+
+    /* Song as title */
+    .song-title {
+        background-color: #FFFFFE;
+        padding: 15px 40px;
+        box-shadow: inset 0px 0px 10px 2px #999999;
+    }
+    .song-title div {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .song-title h4 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+    .song-title a {
+        position: absolute;
+        bottom: -12px;
+        z-index: 1;
+        text-decoration: none;
+        color: #D9376E;
+        font-size: .8rem;
+        transform: translate(7px, 0) scale(1);
+        transition: all 300ms ease-in-out;
+    }
+
+
+
+
+
+
+    /* For a playlist add class "playlist" */
+    .playlist {
+        display: block;
+        background-color: #FFFFFE;
+        padding: 25px 40px;
+        text-decoration: none;
+        color: #0D0D0D;
+        box-shadow: inset 0px 0px 10px 2px #999999;
+        transition: all 200ms ease-in;
+    }
+    .playlist h4 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+    .playlist div {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .playlist:hover {
+        box-shadow: inset 0px 0px 10px 2px #D9376E;
+    }
+
+
+}
+
+
+@media screen and (max-width: 640px) {
+    body {
+        visibility: hidden;
+    }
+    body::before {
+        content: "Currently not available for screens with width less than 640px";
+        color: black;
+        visibility: visible;
+        position: fixed;
+        top: 200px;
+        left: 20px;
+    }
+}
