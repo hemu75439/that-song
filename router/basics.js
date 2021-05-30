@@ -62,25 +62,5 @@ router.get('/find', (req, res)=> {
 
 
 
-router.get('/success', (req, res)=> {
-    res.render('success', {
-        title: 'Success',
-        small: "ADDED",
-        big: "SUCCESSFULLY"
-    })
-})
-
-
-
-
-router.get('/failure', (req, res)=> {
-    res.render('failure', {
-        title: 'Error'
-    })
-})
-
-
-
-
 
 module.exports = router

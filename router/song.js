@@ -2,11 +2,6 @@ const router = require('express').Router()
 const pool = require('../dbconnect')
 
 
-router.get('/', (req, res)=> {
-    res.render('song', {
-        title: 'Search Results'
-    })
-})
 
 
 router.get('/add', (req, res)=> {
