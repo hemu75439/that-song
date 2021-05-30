@@ -8,6 +8,7 @@
 
 <p>
     <img src="./sample1.png" alt="Sample 1">
+    <br><br>
     <img src="./sample2.png" alt="Sample 2">
 </p>
 
