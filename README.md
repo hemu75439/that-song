@@ -2,7 +2,7 @@
 
 
 
-<p>This is a simple app which helps to keep record of songs and playlist.</p>
+<p>This is a simple app which helps to keep record of songs and playlist. And also you can listen the songs on Youtube.</p>
 <p>It contains all the CRUD functions ie. we can create, read, update and delete recroding according to our needs.</p>
 
 
