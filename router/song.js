@@ -18,6 +18,58 @@ router.get('/find', (req, res)=> {
 })
 
 
+router.get('/allsongs', (req, res)=> {
+    pool.getConnection((err, connection)=> {
+    
+        if (err) {
+            res.render('failure', {
+                title: "Error",
+                small: "SOMETHING WENT",
+                big: "WRONG"
+            })
+            console.log(err);
+        } // not connected!
+      
+        // Use the connection
+        connection.query('select * from songs;', (error, songs)=> {
+        
+            if(songs.length != 0) {
+
+                res.render('searchresult', {
+                    title: "Search Results",
+                    playlists: false,
+                    songs: songs
+                })
+
+            } else {
+
+                res.render('failure', {
+                    title: "Not Found",
+                    small: "NO SONGS AVAILABLE",
+                    big: "NOT FOUND"
+                })
+
+            }
+
+            // When done with the connection, release it.
+            connection.release();
+        
+
+            // Handle error after the release.
+            if (error) {
+                console.log(err);
+                res.render('failure', {
+                    title: "Error",
+                    small: "SOMETHING WENT",
+                    big: "WRONG"
+                })
+            }
+      
+
+          // Don't use the connection here, it has been returned to the pool.
+        });
+    });
+})
 
 
 

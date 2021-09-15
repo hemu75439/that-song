@@ -3,7 +3,7 @@
         <h3 class="head-3 m-bottom-25"> PLAYLIST </h3>
         <% playlists.forEach(item => { %>
             
-            <a href="/playlist/<%= item.playlist_id %>" class="playlist">
+            <a href="/playlist/<%= item.playlist_id %>" class="playlist m-bottom-25">
                 <h4> <%= item.name %> </h4>
                 <div>
                     <span>Genre: <%= item.genre %> </span>
@@ -24,7 +24,7 @@
         <h3 class="head-3 m-bottom-25"> SONG </h3>
         <% songs.forEach(item => { %>
 
-            <div class="song m-bottom-25">
+            <div class="song m-bottom-25" onclick="linkIt(this)">
                 <div>
                     <h4> <%= item.name %> </h4>
                     <h4> <%= item.artist %> </h4>
